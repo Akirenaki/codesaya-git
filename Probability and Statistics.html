@@ -1,0 +1,916 @@
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Statistics 1 & 2 Complete Guide</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            line-height: 1.6;
+        }
+        .container {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+        }
+        h1 {
+            color: #667eea;
+            text-align: center;
+            border-bottom: 3px solid #667eea;
+            padding-bottom: 10px;
+        }
+        h2 {
+            color: #764ba2;
+            margin-top: 30px;
+            border-left: 4px solid #764ba2;
+            padding-left: 10px;
+            background: #f8f9fa;
+            padding: 10px;
+            border-radius: 5px;
+        }
+        h3 {
+            color: #667eea;
+            margin-top: 20px;
+        }
+        .problem {
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 15px 0;
+            border-left: 4px solid #667eea;
+        }
+        .solution {
+            background: #e8f5e9;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 15px 0;
+            border-left: 4px solid #4caf50;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        th {
+            background: #667eea;
+            color: white;
+            padding: 12px;
+            text-align: left;
+        }
+        td {
+            padding: 10px;
+            border-bottom: 1px solid #ddd;
+        }
+        tr:hover {
+            background: #f5f5f5;
+        }
+        .formula {
+            background: #fff3cd;
+            padding: 10px;
+            border-radius: 5px;
+            font-family: 'Courier New', monospace;
+            margin: 10px 0;
+        }
+        .note {
+            background: #fff3cd;
+            padding: 10px;
+            border-radius: 5px;
+            border-left: 4px solid #ffc107;
+            margin: 10px 0;
+        }
+        .section-badge {
+            display: inline-block;
+            background: #764ba2;
+            color: white;
+            padding: 3px 8px;
+            border-radius: 3px;
+            font-size: 0.8em;
+            margin-left: 10px;
+        }
+        .s2-badge {
+            background: #e91e63;
+        }
+        ul {
+            margin: 10px 0;
+        }
+        li {
+            margin: 5px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>📊 Complete Statistics 1 & 2 Guide with Practice Problems</h1>
+        
+        <h2>STATISTICS 1 (S1) TOPICS</h2>
+
+        <h2>1. Representation of Data <span class="section-badge">S1</span></h2>
+        
+        <h3>1.1 Histograms</h3>
+        <div class="note">
+            <strong>Key Points:</strong><br>
+            • Area = Frequency<br>
+            • Height = Frequency Density = Frequency / Class Width<br>
+            • No gaps between bars (continuous data)<br>
+            • Frequency = Frequency Density × Class Width
+        </div>
+        
+        <div class="problem">
+            <strong>Problem:</strong> A grouped frequency table for weights of adults:
+            <table>
+                <tr><th>Weight (kg)</th><th>Frequency</th></tr>
+                <tr><td>50 - 60</td><td>60</td></tr>
+                <tr><td>70 - 85</td><td>20</td></tr>
+            </table>
+            In a histogram, the bar for 50-60 kg is 2 cm wide and 9 cm high.
+            Find the width and height of the bar for 70-85 kg class.
+        </div>
+        
+        <div class="solution">
+            <strong>Solution:</strong><br>
+            Width of 50-60 class = 10 kg ≡ 2 cm<br>
+            ⇒ Width of 70-85 class = 15 kg ≡ (15/10) × 2 = <strong>3 cm</strong><br><br>
+            
+            Area of 50-60 bar = 2 × 9 = 18 cm² ≡ frequency 60<br>
+            ⇒ Frequency of 70-85 bar = 20 ≡ area of (20/60) × 18 = 6 cm²<br>
+            ⇒ Height = area ÷ width = 6 ÷ 3 = <strong>2 cm</strong>
+        </div>
+
+        <h3>1.2 Box-and-Whisker Plots</h3>
+        <div class="note">
+            <strong>Five-figure summary:</strong><br>
+            1. Minimum value<br>
+            2. Lower quartile (Q₁)<br>
+            3. Median (Q₂)<br>
+            4. Upper quartile (Q₃)<br>
+            5. Maximum value<br><br>
+            <strong>Skewness from Box Plots:</strong><br>
+            • Symmetrical: (Q₃ - Q₂) = (Q₂ - Q₁)<br>
+            • Positive skew: (Q₃ - Q₂) > (Q₂ - Q₁)<br>
+            • Negative skew: (Q₃ - Q₂) < (Q₂ - Q₁)
+        </div>
+
+        <h2>2. Measures of Location & Spread <span class="section-badge">S1</span></h2>
+
+        <h3>2.1 Mean with Coding</h3>
+        <div class="formula">
+            If t = (x - k)/a, then:<br>
+            • x̄ = at̄ + k<br>
+            • s<sub>x</sub> = as<sub>t</sub><br>
+            • s<sub>x</sub>² = a²s<sub>t</sub>²
+        </div>
+
+        <div class="problem">
+            <strong>Problem:</strong> Ages of 18 people: Σx = 745, Σx² = 33,951<br>
+            (i) Calculate mean and standard deviation<br>
+            (ii) One person leaves, mean of remaining 17 is 41. Find age of person who left and new s.d.
+        </div>
+
+        <div class="solution">
+            <strong>Solution:</strong><br>
+            (i) x̄ = 745/18 = 41.4 years<br>
+            σ = √(Σx²/n - x̄²) = √(33951/18 - 41.4²) = 13.2<br><br>
+            
+            (ii) Total age of 17 people = 41 × 17 = 697<br>
+            Age of person who left = 745 - 697 = <strong>48 years</strong><br><br>
+            
+            New Σx² = 33951 - 48² = 31,647<br>
+            New σ = √(31647/17 - 41²) = <strong>13.4</strong>
+        </div>
+
+        <h2>3. Probability <span class="section-badge">S1</span></h2>
+
+        <h3>3.1 Independent Events</h3>
+        <div class="formula">
+            Events A and B are independent if:<br>
+            P(A ∩ B) = P(A) × P(B)
+        </div>
+
+        <div class="problem">
+            <strong>Problem:</strong> A and B are independent. P(A) = 0.5, P(A ∩ B') = 0.3. Find P(B).
+        </div>
+
+        <div class="solution">
+            <strong>Solution:</strong><br>
+            P(A) = P(A ∩ B) + P(A ∩ B')<br>
+            0.5 = P(A ∩ B) + 0.3<br>
+            P(A ∩ B) = 0.2<br><br>
+            
+            Since A and B are independent:<br>
+            P(A ∩ B) = P(A) × P(B)<br>
+            0.2 = 0.5 × P(B)<br>
+            P(B) = 0.2/0.5 = <strong>0.4</strong>
+        </div>
+
+        <h3>3.2 Conditional Probability</h3>
+        <div class="formula">
+            P(A|B) = P(A ∩ B) / P(B)
+        </div>
+
+        <h2>4. Binomial Distribution <span class="section-badge">S1</span></h2>
+
+        <div class="note">
+            <strong>Conditions:</strong><br>
+            • Fixed number of trials (n)<br>
+            • Only two outcomes (success/failure)<br>
+            • Constant probability of success (p)<br>
+            • Independent trials<br><br>
+            
+            <strong>Notation:</strong> X ~ B(n, p)<br><br>
+            
+            <strong>Formulas:</strong><br>
+            • P(X = x) = ⁿCₓ × p<sup>x</sup> × (1-p)<sup>n-x</sup><br>
+            • E(X) = np<br>
+            • Var(X) = np(1-p)
+        </div>
+
+        <h2>5. Normal Distribution <span class="section-badge">S1</span></h2>
+
+        <div class="formula">
+            X ~ N(μ, σ²)<br><br>
+            Standardize: Z = (X - μ) / σ<br><br>
+            Properties:<br>
+            • Symmetrical bell curve<br>
+            • Mean = Median = Mode<br>
+            • 68% within μ ± σ<br>
+            • 95% within μ ± 2σ<br>
+            • 99.7% within μ ± 3σ
+        </div>
+
+        <div class="problem">
+            <strong>Problem:</strong> Chocolate bars: W ~ N(205, 2.6²), stated weight 200g<br>
+            (a) Find P(bar is underweight)<br>
+            (b) 4 bars chosen. Find P(fewer than 2 underweight)
+        </div>
+
+        <div class="solution">
+            <strong>Solution:</strong><br>
+            (a) Z = (200 - 205)/2.6 = -1.923<br>
+            P(W < 200) = P(Z < -1.92) = 1 - Φ(1.92) = 1 - 0.9726 = <strong>0.0274</strong><br><br>
+            
+            (b) Let p = 0.0274<br>
+            P(0 underweight) = (0.9726)⁴ = 0.8957<br>
+            P(1 underweight) = 4 × 0.0274 × (0.9726)³ = 0.1008<br>
+            P(fewer than 2) = 0.8957 + 0.1008 = <strong>0.997</strong>
+        </div>
+
+        <h3>5.1 Normal Approximation to Binomial</h3>
+        <div class="note">
+            <strong>Conditions:</strong> np > 5 AND nq > 5<br>
+            If X ~ B(n, p), then approximately X ~ N(np, npq)<br><br>
+            <strong>Continuity Correction (e.g., x = 6):</strong>
+            <table>
+                <tr><th>Binomial</th><th>Normal</th></tr>
+                <tr><td>x = 6</td><td>5.5 ≤ x ≤ 6.5</td></tr>
+                <tr><td>x > 6</td><td>x ≥ 6.5</td></tr>
+                <tr><td>x ≥ 6</td><td>x ≥ 5.5</td></tr>
+                <tr><td>x < 6</td><td>x ≤ 5.5</td></tr>
+                <tr><td>x ≤ 6</td><td>x ≤ 6.5</td></tr>
+            </table>
+        </div>
+
+        <h2>STATISTICS 2 (S2) TOPICS</h2>
+
+        <h2>6. Poisson Distribution <span class="section-badge s2-badge">S2</span></h2>
+
+        <div class="note">
+            <strong>Notation:</strong> X ~ Po(λ)<br><br>
+            <strong>Formula:</strong> P(X = x) = (e<sup>-λ</sup> × λ<sup>x</sup>) / x!<br><br>
+            <strong>Properties:</strong><br>
+            • E(X) = λ<br>
+            • Var(X) = λ<br>
+            • Mean = Variance (unique property!)<br><br>
+            
+            <strong>Conditions for Poisson:</strong><br>
+            • Events occur randomly<br>
+            • Events occur singly (not simultaneously)<br>
+            • Events occur independently<br>
+            • Constant rate (mean proportional to interval)
+        </div>
+
+        <div class="problem">
+            <strong>Problem:</strong> Radioactive emissions: A ~ Po(0.65), B ~ Po(0.45) per minute<br>
+            (i) Find P(≥3 emissions from A in 3 minutes)<br>
+            (ii) Find P(<4 emissions from A and B together in 2 minutes)
+        </div>
+
+        <div class="solution">
+            <strong>Solution:</strong><br>
+            (i) A ~ Po(0.65 × 3) = Po(1.95)<br>
+            P(A ≥ 3) = 1 - P(A ≤ 2)<br>
+            = 1 - [e<sup>-1.95</sup>(1.95²/2! + 1.95¹/1! + 1.95⁰/0!)]<br>
+            = 1 - 0.690 = <strong>0.310</strong><br><br>
+            
+            (ii) (A + B) ~ Po(2(0.65 + 0.45)) = Po(2.2)<br>
+            P(A + B < 4) = P(A + B ≤ 3)<br>
+            = e<sup>-2.2</sup>[2.2³/3! + 2.2²/2! + 2.2¹/1! + 2.2⁰/0!]<br>
+            = <strong>0.819</strong>
+        </div>
+
+        <h3>6.1 Addition of Poisson Distributions</h3>
+        <div class="formula">
+            If X ~ Po(λ) and Y ~ Po(μ) are independent, then:<br>
+            X + Y ~ Po(λ + μ)
+        </div>
+
+        <h3>6.2 Poisson Approximation to Binomial</h3>
+        <div class="note">
+            <strong>Conditions:</strong> n > 50 AND np < 5<br>
+            If X ~ B(n, p), then approximately X ~ Po(np)
+        </div>
+
+        <h3>6.3 Normal Approximation to Poisson</h3>
+        <div class="note">
+            <strong>Condition:</strong> λ > 15<br>
+            If X ~ Po(λ), then approximately X ~ N(λ, λ)<br>
+            <strong>Remember continuity correction!</strong>
+        </div>
+
+        <div class="problem">
+            <strong>Problem:</strong> Flaws in cloth: X ~ Po(0.04l) where l = length in meters<br>
+            (i) Find P(< 2 flaws in 10m)<br>
+            (ii) Approximate P(≥ 46 flaws in 1000m)<br>
+            (iii) Cost = X² pence. Find expected cost for 1000m
+        </div>
+
+        <div class="solution">
+            <strong>Solution:</strong><br>
+            (i) λ = 0.04(10) = 0.4, X ~ Po(0.4)<br>
+            P(X < 2) = e<sup>-0.4</sup>(0.4⁰/0! + 0.4¹/1!) = <strong>0.938</strong><br><br>
+            
+            (ii) λ = 0.04(1000) = 40 > 15, use normal approximation<br>
+            X ~ Po(40) → Y ~ N(40, 40)<br>
+            P(X ≥ 46) with continuity: P(Y ≥ 45.5)<br>
+            Z = (45.5 - 40)/√40 = 0.870<br>
+            P(Z ≥ 0.870) = 1 - 0.808 = <strong>0.192</strong><br><br>
+            
+            (iii) Var(X) = E(X²) - [E(X)]²<br>
+            40 = E(X²) - 40²<br>
+            E(X²) = 1640 pence = <strong>£16.40</strong>
+        </div>
+
+        <h2>7. Linear Combinations of Random Variables <span class="section-badge s2-badge">S2</span></h2>
+
+        <div class="formula">
+            <strong>For any random variables:</strong><br>
+            E(aX + bY + c) = aE(X) + bE(Y) + c<br><br>
+            
+            <strong>For independent random variables:</strong><br>
+            Var(aX + bY + c) = a²Var(X) + b²Var(Y)<br>
+            Note: Var(X ± Y) = Var(X) + Var(Y)<br><br>
+            
+            <strong>Important distinction:</strong><br>
+            E(2X) = 2μ AND E(X₁ + X₂) = 2μ<br>
+            BUT Var(2X) = 4σ² while Var(X₁ + X₂) = 2σ²
+        </div>
+
+        <div class="problem">
+            <strong>Problem:</strong> T has mean 5 and variance 16. Find c and d such that:<br>
+            E(cT + d) = 100 and Var(cT + d) = 144
+        </div>
+
+        <div class="solution">
+            <strong>Solution:</strong><br>
+            E(cT + d) = cE(T) + d = 5c + d = 100 ... (1)<br><br>
+            
+            Var(cT + d) = c²Var(T) = 16c² = 144<br>
+            c² = 9, so c = ±3<br><br>
+            
+            From equation (1):<br>
+            If c = 3: d = 100 - 15 = 85 → <strong>(c, d) = (3, 85)</strong><br>
+            If c = -3: d = 100 + 15 = 115 → <strong>(c, d) = (-3, 115)</strong>
+        </div>
+
+        <h2>8. Continuous Random Variables <span class="section-badge s2-badge">S2</span></h2>
+
+        <h3>8.1 Probability Density Function (pdf)</h3>
+        <div class="note">
+            <strong>Properties:</strong><br>
+            • ∫ f(x)dx = 1 (total area = 1)<br>
+            • f(x) ≥ 0 (no negative probabilities)<br>
+            • P(a < X < b) = ∫<sub>a</sub><sup>b</sup> f(x)dx<br>
+            • P(X = b) = 0 (no area at a point)<br>
+            • Mode = maximum point of f(x)
+        </div>
+
+        <div class="formula">
+            <strong>Mean:</strong> E(X) = ∫ xf(x)dx<br>
+            <strong>Variance:</strong> Var(X) = E(X²) - [E(X)]²<br>
+            where E(X²) = ∫ x²f(x)dx<br><br>
+            <strong>Median:</strong> Value m where ∫<sub>-∞</sub><sup>m</sup> f(x)dx = 0.5
+        </div>
+
+        <div class="problem">
+            <strong>Problem:</strong> f(x) = kx(6-x) for 2 < x < 5, otherwise 0<br>
+            (i) Find k<br>
+            (ii) Find mode<br>
+            (iii) Find P(X < mode)
+        </div>
+
+        <div class="solution">
+            <strong>Solution:</strong><br>
+            (i) ∫<sub>2</sub><sup>5</sup> kx(6-x)dx = 1<br>
+            [3kx² - kx³/3]<sub>2</sub><sup>5</sup> = 1<br>
+            75k - 125k/3 - 12k + 8k/3 = 24k = 1<br>
+            <strong>k = 1/24</strong><br><br>
+            
+            (ii) f'(x) = k(6 - 2x) = 0<br>
+            x = 3 → <strong>Mode = 3</strong><br><br>
+            
+            (iii) P(X < 3) = ∫<sub>2</sub><sup>3</sup> (x/24)(6-x)dx<br>
+            = [3x²/24 - x³/72]<sub>2</sub><sup>3</sup><br>
+            = (1/24)(27/3 - 27/3 - 12 + 8/3) = <strong>13/36</strong>
+        </div>
+
+        <h2>9. Sampling & Estimation <span class="section-badge s2-badge">S2</span></h2>
+
+        <h3>9.1 Central Limit Theorem</h3>
+        <div class="note">
+            For a sample of size n from population with mean μ and variance σ²:<br>
+            <strong>Sample mean distribution:</strong> X̄ ~ N(μ, σ²/n)<br><br>
+            This applies even if original population not normal (if n large enough)
+        </div>
+
+        <h3>9.2 Variance Formulas</h3>
+        <div class="formula">
+            <strong>Population/sample variance (divisor n):</strong><br>
+            σ² = (1/n)[Σx² - (Σx)²/n]<br><br>
+            
+            <strong>Unbiased estimate (divisor n-1):</strong><br>
+            s² = (1/(n-1))[Σx² - (Σx)²/n]<br><br>
+            Use (n-1) when estimating population variance from sample
+        </div>
+
+        <h3>9.3 Confidence Intervals</h3>
+        <div class="note">
+            <strong>For population mean (σ known):</strong><br>
+            (x̄ - z·σ/√n, x̄ + z·σ/√n)<br><br>
+            
+            <strong>For population mean (σ unknown, large sample):</strong><br>
+            (x̄ - z·s/√n, x̄ + z·s/√n)<br><br>
+            
+            <strong>For population proportion:</strong><br>
+            (p̂ - z√(p̂q̂/n), p̂ + z√(p̂q̂/n))<br>
+            where p̂ = r/n<br><br>
+            
+            <strong>Common z-values:</strong>
+            <table>
+                <tr><th>Confidence</th><th>90%</th><th>95%</th><th>98%</th><th>99%</th></tr>
+                <tr><td>z-value</td><td>1.645</td><td>1.960</td><td>2.326</td><td>2.576</td></tr>
+            </table>
+        </div>
+
+        <div class="problem">
+            <strong>Problem:</strong> 87 out of n people have high-speed internet.<br>
+            Confidence interval: 0.1129 < p < 0.1771<br>
+            (i) Find n<br>
+            (ii) Find confidence level α%
+        </div>
+
+        <div class="solution">
+            <strong>Solution:</strong><br>
+            (i) Midpoint = (0.1129 + 0.1771)/2 = 0.145<br>
+            87/n = 0.145<br>
+            <strong>n = 600</strong><br><br>
+            
+            (ii) 0.1771 = 0.145 + z√(0.145×0.855/600)<br>
+            0.0321 = z × 0.0144<br>
+            z = 2.233<br>
+            Φ(2.233) = 0.9872<br>
+            α = 2(0.9872 - 0.5) × 100 = <strong>97.44%</strong>
+        </div>
+
+        <h2>10. Hypothesis Testing <span class="section-badge s2-badge">S2</span></h2>
+
+        <h3>10.1 Basic Procedure</h3>
+        <div class="note">
+            <strong>Steps:</strong><br>
+            1. State H₀ and H₁<br>
+            2. Choose significance level<br>
+            3. Determine critical value(s)<br>
+            4. Calculate test statistic<br>
+            5. Compare with critical region<br>
+            6. State conclusion in context
+        </div>
+
+        <div class="formula">
+            <strong>Null Hypothesis:</strong> H₀: μ = μ₀<br><br>
+            <strong>Alternative Hypothesis:</strong><br>
+            • H₁: μ < μ₀ (one-tail, decrease)<br>
+            • H₁: μ > μ₀ (one-tail, increase)<br>
+            • H₁: μ ≠ μ₀ (two-tail, difference)<br><br>
+            
+            <strong>Test Statistic:</strong> Z = (x̄ - μ)/(σ/√n)
+        </div>
+
+        <h3>10.2 Critical Values Table</h3>
+        <table>
+            <tr>
+                <th>Significance</th>
+                <th>Two-tail (μ ≠ μ₀)</th>
+                <th>One-tail (μ > μ₀)</th>
+                <th>One-tail (μ < μ₀)</th>
+            </tr>
+            <tr><td>10%</td><td>±1.645</td><td>1.282</td><td>-1.282</td></tr>
+            <tr><td>5%</td><td>±1.960</td><td>1.645</td><td>-1.645</td></tr>
+            <tr><td>2%</td><td>±2.326</td><td>2.054</td><td>-2.054</td></tr>
+            <tr><td>1%</td><td>±2.576</td><td>2.326</td><td>-2.326</td></tr>
+        </table>
+
+        <h3>10.3 Type I and Type II Errors</h3>
+        <div class="note">
+            <strong>Type I Error:</strong> Reject true H₀<br>
+            • P(Type I error) = significance level<br><br>
+            
+            <strong>Type II Error:</strong> Accept false H₀<br>
+            • Calculate by finding P(accept H₀ | H₀ false)
+        </div>
+
+        <h3>10.4 Different Distribution Tests</h3>
+        <table>
+            <tr><th>Distribution</th><th>Test Statistic</th><th>Notes</th></tr>
+            <tr>
+                <td>Normal (σ known)</td>
+                <td>Z = (x̄ - μ)/(σ/√n)</td>
+                <td>Exact for normal, approximate for large sample</td>
+            </tr>
+            <tr>
+                <td>Normal (σ unknown)</td>
+                <td>Z = (x̄ - μ)/(s/√n)</td>
+                <td>Use unbiased estimate s, large sample</td>
+            </tr>
+            <tr>
+                <td>Poisson (large λ)</td>
+                <td>Use normal approximation</td>
+                <td>Apply continuity correction</td>
+            </tr>
+            <tr>
+                <td>Proportion (Binomial)</td>
+                <td>Use normal approximation</td>
+                <td>X ~ N(p, pq/n), continuity correction</td>
+            </tr>
+        </table>
+
+        <h2>COMPREHENSIVE SUMMARY TABLES</h2>
+
+        <h3>Distribution Comparison</h3>
+        <table>
+            <tr>
+                <th>Distribution</th>
+                <th>Type</th>
+                <th>Parameters</th>
+                <th>Mean</th>
+                <th>Variance</th>
+                <th>Key Conditions</th>
+            </tr>
+            <tr>
+                <td><strong>Binomial</strong></td>
+                <td>Discrete</td>
+                <td>n, p</td>
+                <td>np</td>
+                <td>np(1-p)</td>
+                <td>Fixed trials, two outcomes, constant p</td>
+            </tr>
+            <tr>
+                <td><strong>Poisson</strong></td>
+                <td>Discrete</td>
+                <td>λ</td>
+                <td>λ</td>
+                <td>λ</td>
+                <td>Random, singly, independent, constant rate</td>
+            </tr>
+            <tr>
+                <td><strong>Normal</strong></td>
+                <td>Continuous</td>
+                <td>μ, σ²</td>
+                <td>μ</td>
+                <td>σ²</td>
+                <td>Symmetrical, bell-shaped</td>
+            </tr>
+            <tr>
+                <td><strong>Continuous pdf</strong></td>
+                <td>Continuous</td>
+                <td>Varies</td>
+                <td>∫xf(x)dx</td>
+                <td>E(X²)-[E(X)]²</td>
+                <td>f(x)≥0, ∫f(x)dx=1</td>
+            </tr>
+        </table>
+
+        <h3>When to Use Which Distribution</h3>
+        <table>
+            <tr><th>Scenario</th><th>Distribution</th><th>Example</th></tr>
+            <tr>
+                <td>Fixed number of trials, success/failure</td>
+                <td>Binomial</td>
+                <td>10 coin flips, count heads</td>
+            </tr>
+            <tr>
+                <td>Events in an interval, rare events</td>
+                <td>Poisson</td>
+                <td>Number of calls per hour</td>
+            </tr>
+            <tr>
+                <td>Continuous measurement, natural variation</td>
+                <td>Normal</td>
+                <td>Heights, weights, IQ scores</td>
+            </tr>
+            <tr>
+                <td>Binomial with n>50, np<5</td>
+                <td>Poisson approx</td>
+                <td>B(100, 0.02) → Po(2)</td>
+            </tr>
+            <tr>
+                <td>Binomial with n large, np>5, nq>5</td>
+                <td>Normal approx</td>
+                <td>B(100, 0.3) → N(30, 21)</td>
+            </tr>
+            <tr>
+                <td>Poisson with λ>15</td>
+                <td>Normal approx</td>
+                <td>Po(20) → N(20, 20)</td>
+            </tr>
+        </table>
+
+        <h3>Approximation Decision Tree</h3>
+        <div class="note">
+            <strong>Given Binomial X ~ B(n, p):</strong><br>
+            • If n > 50 AND np < 5 → Use Poisson: X ~ Po(np)<br>
+            • If np > 5 AND nq > 5 → Use Normal: X ~ N(np, npq) + continuity correction<br><br>
+            
+            <strong>Given Poisson X ~ Po(λ):</strong><br>
+            • If λ > 15 → Use Normal: X ~ N(λ, λ) + continuity correction<br><br>
+            
+            <strong>Always apply continuity correction when approximating discrete with continuous!</strong>
+        </div>
+
+        <h3>Key Formulas Summary</h3>
+        <table>
+            <tr><th>Topic</th><th>Formula</th><th>Notes</th></tr>
+            <tr>
+                <td><strong>Mean (grouped)</strong></td>
+                <td>x̄ = Σ(xf)/Σf</td>
+                <td>Use mid-interval values</td>
+            </tr>
+            <tr>
+                <td><strong>Variance</strong></td>
+                <td>σ² = Σx²/n - x̄²</td>
+                <td>Or use divisor (n-1) for unbiased estimate</td>
+            </tr>
+            <tr>
+                <td><strong>Coding</strong></td>
+                <td>If t=(x-k)/a: x̄=at̄+k, σₓ=aσₜ</td>
+                <td>Simplifies calculations</td>
+            </tr>
+            <tr>
+                <td><strong>PMCC</strong></td>
+                <td>r = S<sub>xy</sub>/√(S<sub>xx</sub>S<sub>yy</sub>)</td>
+                <td>-1 ≤ r ≤ 1, unaffected by coding</td>
+            </tr>
+            <tr>
+                <td><strong>S-values</strong></td>
+                <td>S<sub>xy</sub> = Σxy - (Σx)(Σy)/n</td>
+                <td>Similar for S<sub>xx</sub> and S<sub>yy</sub></td>
+            </tr>
+            <tr>
+                <td><strong>Regression</strong></td>
+                <td>y = a + bx, b = S<sub>xy</sub>/S<sub>xx</sub></td>
+                <td>a = ȳ - bx̄, line passes through (x̄,ȳ)</td>
+            </tr>
+            <tr>
+                <td><strong>Binomial</strong></td>
+                <td>P(X=x) = ⁿCₓp^x(1-p)^(n-x)</td>
+                <td>Mean=np, Var=np(1-p)</td>
+            </tr>
+            <tr>
+                <td><strong>Poisson</strong></td>
+                <td>P(X=x) = e^(-λ)λ^x/x!</td>
+                <td>Mean=Var=λ</td>
+            </tr>
+            <tr>
+                <td><strong>Normal</strong></td>
+                <td>Z = (X-μ)/σ</td>
+                <td>Standardizes to N(0,1)</td>
+            </tr>
+            <tr>
+                <td><strong>Sample mean</strong></td>
+                <td>X̄ ~ N(μ, σ²/n)</td>
+                <td>Central Limit Theorem</td>
+            </tr>
+            <tr>
+                <td><strong>Expectation</strong></td>
+                <td>E(aX+bY+c) = aE(X)+bE(Y)+c</td>
+                <td>Linear property</td>
+            </tr>
+            <tr>
+                <td><strong>Variance</strong></td>
+                <td>Var(aX+bY+c) = a²Var(X)+b²Var(Y)</td>
+                <td>For independent X,Y</td>
+            </tr>
+            <tr>
+                <td><strong>Confidence Interval</strong></td>
+                <td>(x̄ - z·σ/√n, x̄ + z·σ/√n)</td>
+                <td>Use s if σ unknown</td>
+            </tr>
+            <tr>
+                <td><strong>Test Statistic</strong></td>
+                <td>Z = (x̄-μ)/(σ/√n)</td>
+                <td>For hypothesis tests</td>
+            </tr>
+        </table>
+
+        <h3>Common Mistakes to Avoid</h3>
+        <div class="note">
+            <strong>1. Variance calculations:</strong><br>
+            • Var(2X) = 4Var(X) but Var(X₁+X₂) = 2Var(X) - not the same!<br><br>
+            
+            <strong>2. Continuity correction:</strong><br>
+            • Always use when approximating discrete with continuous distribution<br>
+            • X > 6 becomes X ≥ 6.5, X ≥ 6 becomes X ≥ 5.5<br><br>
+            
+            <strong>3. Independence:</strong><br>
+            • Check P(A∩B) = P(A)×P(B) to prove independence<br>
+            • Don't assume independence without verification<br><br>
+            
+            <strong>4. Poisson conditions:</strong><br>
+            • Mean = Variance is the key property<br>
+            • When adding: Po(λ₁) + Po(λ₂) = Po(λ₁+λ₂)<br><br>
+            
+            <strong>5. Hypothesis testing:</strong><br>
+            • Always state conclusion in context of the problem<br>
+            • Don't say "accept H₀" - say "insufficient evidence to reject H₀"<br><br>
+            
+            <strong>6. Quartiles from grouped data:</strong><br>
+            • Use linear interpolation, don't round n/4 up<br><br>
+            
+            <strong>7. Regression interpretation:</strong><br>
+            • 'a' is the y-intercept (value when x=0)<br>
+            • 'b' is the gradient (change in y per unit change in x)<br>
+            • Always interpret in context!
+        </div>
+
+        <h3>Exam Tips & Techniques</h3>
+        <div class="note">
+            <strong>General:</strong><br>
+            • Show all working - method marks available<br>
+            • Use correct notation: X ~ N(μ,σ²) not X ~ N(μ,σ)<br>
+            • State distribution clearly before calculating<br>
+            • Give answers to 3 s.f. unless stated otherwise<br><br>
+            
+            <strong>Probability:</strong><br>
+            • Draw tree diagrams or Venn diagrams<br>
+            • Check probabilities sum to 1<br>
+            • For "at least" use 1 - P(none)<br><br>
+            
+            <strong>Normal distribution:</strong><br>
+            • Always sketch the curve<br>
+            • Mark mean and required value<br>
+            • Show standardization step<br>
+            • Use symmetry when dealing with negative z-values<br><br>
+            
+            <strong>Poisson:</strong><br>
+            • Adjust λ for different time intervals<br>
+            • Remember mean = variance property<br>
+            • Check if normal approximation appropriate (λ>15)<br><br>
+            
+            <strong>Hypothesis testing:</strong><br>
+            • Define symbols used (what does μ represent?)<br>
+            • State H₀ and H₁ clearly<br>
+            • Calculate test statistic showing formula<br>
+            • Compare with critical value<br>
+            • Give conclusion in context<br><br>
+            
+            <strong>Confidence intervals:</strong><br>
+            • State what parameter you're estimating<br>
+            • Show calculation of point estimate<br>
+            • Use correct z-value for confidence level<br>
+            • Give interval as (lower, upper)<br><br>
+            
+            <strong>Data representation:</strong><br>
+            • For histograms: remember frequency = area<br>
+            • For box plots: calculate Q₁, Q₂, Q₃ carefully<br>
+            • Comment on skewness using quartile positions<br>
+            • Make comparisons when asked (higher/lower, more/less spread)
+        </div>
+
+        <h3>Calculator Tips</h3>
+        <div class="note">
+            <strong>Statistics mode:</strong><br>
+            • Learn how to enter frequency data<br>
+            • Use calculator for Σx, Σx², mean, σ<br>
+            • Check you're using correct σ (n or n-1)<br><br>
+            
+            <strong>For binomial:</strong><br>
+            • Most calculators have binomial pdf/cdf functions<br>
+            • Use cumulative for P(X≤r) type questions<br><br>
+            
+            <strong>For normal:</strong><br>
+            • Learn inverse normal function<br>
+            • Useful when given probability, need to find x<br><br>
+            
+            <strong>Save values:</strong><br>
+            • Store intermediate results in memory<br>
+            • Use full calculator accuracy, round only at end<br>
+            • Keep at least 4 d.p. for intermediate values
+        </div>
+
+        <h3>Quick Reference: Which Test/Method?</h3>
+        <table>
+            <tr><th>Given</th><th>Method</th></tr>
+            <tr>
+                <td>Testing mean, σ known, normal population</td>
+                <td>Z-test: Z = (x̄-μ)/(σ/√n)</td>
+            </tr>
+            <tr>
+                <td>Testing mean, σ unknown, large sample</td>
+                <td>Z-test with s: Z = (x̄-μ)/(s/√n)</td>
+            </tr>
+            <tr>
+                <td>Testing Poisson mean, large λ</td>
+                <td>Normal approx + continuity correction</td>
+            </tr>
+            <tr>
+                <td>Testing proportion, large n</td>
+                <td>Normal approx to binomial + continuity</td>
+            </tr>
+            <tr>
+                <td>Confidence interval, σ known</td>
+                <td>x̄ ± z(σ/√n)</td>
+            </tr>
+            <tr>
+                <td>Confidence interval, σ unknown</td>
+                <td>x̄ ± z(s/√n)</td>
+            </tr>
+            <tr>
+                <td>Estimating population variance</td>
+                <td>Use s² with divisor (n-1)</td>
+            </tr>
+        </table>
+
+        <h3>Important Inequalities for Discrete Distributions</h3>
+        <div class="formula">
+            P(X < r) = P(X ≤ r-1)<br>
+            P(X > r) = 1 - P(X ≤ r)<br>
+            P(X ≥ r) = 1 - P(X ≤ r-1)<br>
+            P(X = r) = P(X ≤ r) - P(X ≤ r-1)<br><br>
+            
+            These are crucial for Poisson and Binomial calculations!
+        </div>
+
+        <h3>Permutations vs Combinations</h3>
+        <table>
+            <tr><th>Concept</th><th>Formula</th><th>When to Use</th></tr>
+            <tr>
+                <td><strong>Permutations</strong></td>
+                <td>ⁿPᵣ = n!/(n-r)!</td>
+                <td>Order matters (arrangements)</td>
+            </tr>
+            <tr>
+                <td><strong>Combinations</strong></td>
+                <td>ⁿCᵣ = n!/[r!(n-r)!]</td>
+                <td>Order doesn't matter (selections)</td>
+            </tr>
+            <tr>
+                <td><strong>Arrangements with repetition</strong></td>
+                <td>n!/[r₁!r₂!...rₖ!]</td>
+                <td>Letters repeated in a word</td>
+            </tr>
+        </table>
+
+        <h3>Final Checklist Before Exam</h3>
+        <div class="note">
+            ✓ Know all formulas (some not in formula booklet!)<br>
+            ✓ Practice using normal distribution tables<br>
+            ✓ Understand when to use continuity correction<br>
+            ✓ Know conditions for each distribution<br>
+            ✓ Practice approximation problems<br>
+            ✓ Understand difference between Var(2X) and Var(X₁+X₂)<br>
+            ✓ Know how to calculate unbiased variance (n-1)<br>
+            ✓ Practice hypothesis test questions (all types)<br>
+            ✓ Know critical values table by heart<br>
+            ✓ Understand Type I and Type II errors<br>
+            ✓ Practice confidence interval questions<br>
+            ✓ Review correlation vs causation<br>
+            ✓ Know how to interpret PMCC and regression coefficients<br>
+            ✓ Practice probability with tree diagrams<br>
+            ✓ Understand independence vs mutually exclusive<br>
+            ✓ Know how to handle conditional probability
+        </div>
+
+        <div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 20px; border-radius: 10px; margin-top: 30px; text-align: center;">
+            <h2 style="color: white; border: none;">📚 Study Complete!</h2>
+            <p>You now have a comprehensive guide covering all Statistics 1 and Statistics 2 topics with worked examples, formulas, and exam tips. Practice regularly and review the summary tables before your exam. Good luck! 🎓</p>
+        </div>
+    </div>
+</body>
+</html>
